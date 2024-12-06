@@ -29,7 +29,7 @@ Output: 21
     public int reverse(int x) {
         int erg = 0;
 
-        // Negative bereich uberprufen
+        // Negative bereich uberprufen, da wir sonst im variable "erg" auf falsche Ergebnisse kommen. 
         if (x < 0) {
             x = Math.abs(x); 
 
@@ -52,6 +52,6 @@ Output: 21
     public static void main(String[] args){
         ReverseInteger a = new ReverseInteger();
         int erg = a.reverse(123);
-        System.out.println(erg);
+        System.out.println(erg); // 321
     }
 }
