@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class LongestSubwit_RepCha {
+class LongestSubWit_RepCha {
     /*
      * Aufgabestellung:
      * Given a string s, find the length of the longest
@@ -87,7 +87,7 @@ class LongestSubwit_RepCha {
     }
 
     public static void main(String[] args) {
-        LongestSubwit_RepCha a = new LongestSubwit_RepCha();
+        LongestSubWit_RepCha a = new LongestSubWit_RepCha();
         int erg = a.lengthOfLongestSubstring("bbbbb");
         System.out.println(erg);
     }
