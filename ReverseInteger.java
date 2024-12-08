@@ -116,11 +116,17 @@ public class ReverseInteger {
         // Starte ab der nächsten Position nach dem Vorzeichen
         int erg = 0;
 
+<<<<<<< HEAD
         // Schleife über die Zeichen
         for (int i = j; i < a.length(); i++) {
             char ch = a.charAt(i);
             if (ch >= '0' && ch <= '9') {
                 int digit = ch - '0';
+=======
+        // Negative bereich uberprufen, da wir sonst im variable "erg" auf falsche Ergebnisse kommen. 
+        if (x < 0) {
+            x = Math.abs(x); 
+>>>>>>> d74f6ca79e8b88b44032b88f97f6df9258c1948e
 
                 if (erg > (Integer.MAX_VALUE - digit) / 10) {
                     return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
@@ -133,8 +139,23 @@ public class ReverseInteger {
             }
         }
 
+<<<<<<< HEAD
         erg *= sign;
 
         return erg;
+=======
+        while (x > 0) {
+            int mod = x % 10; 
+            erg = erg * 10 + mod; 
+            x /= 10; 
+        }
+    
+        return (erg <= Integer.MAX_VALUE) ? erg : 0;
+    }
+    public static void main(String[] args){
+        ReverseInteger a = new ReverseInteger();
+        int erg = a.reverse(123);
+        System.out.println(erg); // 321
+>>>>>>> d74f6ca79e8b88b44032b88f97f6df9258c1948e
     }
 }
