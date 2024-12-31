@@ -1,7 +1,7 @@
 // Alle Elemente mit der Klasse 'nav-punkte' auswählen
 const navItems = document.querySelectorAll('.nav-punkte');
 
-// Für jedes Element einen Event Listener hinzufügen
+// Für jedes Element einen Event Listener hinzufuegen
 navItems.forEach((item) => {
   item.addEventListener('click', function () {
     // Entfernt vorherige aktive Farben (optional, wenn nur ein Element hervorgehoben sein soll)
@@ -13,7 +13,7 @@ navItems.forEach((item) => {
 });
 
 //#####################################################
-// Fuege sanftes Scrollen für den Shops-Link hinzu 
+// Fuege sanftes Scrollen fuer den Shops-Link hinzu 
 let shopLink = document.querySelector('a[href="#shops"]');
 
 shopLink.addEventListener('click', (event) => {
@@ -35,14 +35,14 @@ blogs.addEventListener('click', ()=>{
   });
 });
 
-/* jetzt, das gleiche auch für button machen  */
+/* jetzt, das gleiche auch fuer button machen  */
 
 
 /*wenn das button in der shopliste(add to cart) geklickt wird, 
 dass es dann zum cart hinzugefuegt werden soll .  */
 
 
-//  Array zur Speicherung der hinzugefügten Produkte
+//  Array zur Speicherung der hinzugefuegten Produkte
 let cartItems = []; 
 
 //  Selektiere notwendige Elemente
