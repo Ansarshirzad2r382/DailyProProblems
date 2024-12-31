@@ -1,0 +1,385 @@
+/* Allgemeine Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+nav ul {
+    border: 2px solid gray;
+    border-radius: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li {
+    font-family: Arial, sans-serif;
+    color: black;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.4s ease-out;
+}
+
+nav ul > .Marke {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Main-Bereich */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+main .uberschrift {
+    position: absolute;
+    top: 240px;
+    left: 40px;
+}
+
+main .uberschrift > * {
+    margin: 5px;
+}
+
+main .uberschrift > button {
+    width: 170px;
+    height: 30px;
+    background-color: rgb(24, 204, 147);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main .photo > img {
+    position: relative;
+    left: 60%;
+}
+
+/* Kartenbereich */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: rgba(221, 233, 235, 0.133);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-Beschreibung {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.stars {
+    font-size: 18px;
+    color: gold;
+    margin: 5px 0;
+}
+
+.add {
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(6, 128, 71);
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.add:hover {
+    background-color: rgb(4, 94, 55);
+}
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Sanfter Übergang für Vergrößerung und Schatten */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Vergrößert die Karte bei Hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Verstärkt den Schatten bei Hover */
+}
+
+
+/* Blog-Bereich */
+.blogs {
+    display: flex; /* Flexbox für horizontale Anordnung */
+    justify-content: center; /* Zentriert die Blog-Boxen */
+    gap: 20px; /* Abstand zwischen den Blog-Boxen */
+    flex-wrap: no-wrap; /* Verhindert das Umfließen der Blog-Boxen */
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Individuelle Blog-Box */
+.blog1 {
+    display: flex;
+    flex-direction: column; /* Vertikale Anordnung von Bild und Text */
+    align-items: center; /* Zentriert den Inhalt innerhalb der Box */
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: rgba(221, 233, 235, 0.9); /* Hellerer Hintergrund für bessere Lesbarkeit */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Deutlicherer Schatten für ein elegantes Aussehen */
+    width: 300px; /* Breite der Boxen */
+    height: auto;
+    text-align: center;
+    padding: 20px; /* Abstand innerhalb der Box */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    background: #f0f0f0; /* Neutraler Hintergrund */
+}
+
+/* Hover-Effekt für die Blog-Box */
+.blog1:hover {
+    transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkeren Schatten bei Hover */
+}
+
+/* Bild-Stil innerhalb des Blogs */
+.imgs1 {
+    width: 100%; /* Bild über die gesamte Breite der Box */
+    height: 200px; /* Feste Höhe für das Bild */
+    object-fit: cover; /* Bild so zuschneiden, dass es die Box ausfüllt */
+    border-radius: 15px; /* Runde Ecken für das Bild */
+    margin-bottom: 20px; /* Abstand zwischen Bild und Text */
+}
+.blogs{
+    display: flex;
+    gap: 100px;
+}
+.blog1{
+    width: 400px;
+}
+/* Blog-Titel und Text Styling */
+.blog1 h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px; /* Größerer Titel */
+    font-weight: bold;
+    color: #333; /* Dunklerer Text für bessere Lesbarkeit */
+    margin: 10px 0;
+}
+
+/* Beschreibung im Blog */
+.blog1 p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555; /* Etwas heller für die Beschreibung */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    padding: 0 10px; /* Etwas Abstand links und rechts für den Text */
+}
+
+/* Button-Stil für "Read More" */
+.btnReMor {
+    border: 2px solid #4caf50; /* Grüner Rand */
+    border-radius: 5px;
+    color: #4caf50;
+    background-color: transparent;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover-Effekt für den "Read More"-Button */
+.btnReMor:hover {
+    background-color: #4caf50; /* Grüner Hintergrund bei Hover */
+    color: white; /* Weiße Schrift bei Hover */
+    border-color: #4caf50; /* Beibehaltung des grünen Rands */
+}
+
+.blog1 a {
+    text-decoration: none;
+}
+
+/* hier faengt der cart teil */
+
+#cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    border-left: 2px solid #ccc;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#cart-overlay h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cart-items .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-items img {
+    border-radius: 5px;
+}
+
+#cart-items p {
+    margin: 0;
+    font-size: 14px;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.remove-item {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.remove-item:hover {
+    background-color: darkred;
+}
+
+#close-cart {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#close-cart:hover {
+    background-color: #222;
+}
+
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+footer .Signup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: start;
+}
+
+.Signup .inputsection {
+    margin-left: 50%;
+}
+
+footer .Signup h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer .Signup p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer .Signup input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+footer .Signup button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer .Signup button:hover {
+    background-color: #45a049;
+}
+
+.footLastInformation {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.footLastInformation div {
+    flex: 1;
+    text-align: start;
+    padding: 10px;
+}
+
+.footLastInformation h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footLastInformation p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}

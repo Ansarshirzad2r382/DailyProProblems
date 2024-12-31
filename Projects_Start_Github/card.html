@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cards{
+            display: flex;
+            gap: 100px;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            display: grid;
+            grid-template-columns: 1fr ;
+            align-items: center;  
+            justify-content: center;
+    
+            max-width: 300px;
+
+        }
+        .imgs{
+            width: 250px;
+            cursor: pointer;
+        }
+        .imgs:hover{
+            width: 300px;
+            transition: width 0.5s ;
+            cursor: pointer;
+        }
+        .stars{
+            display: inline-block;
+            font-size: 24px;
+        }
+        .star.filled{
+            color: gold;
+        }
+        .star{
+            color: gainsboro;
+        }
+        .card-Beschreibung{
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        .add{
+            border: 2px solid black;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(6, 128, 71);
+
+            width: 120px;
+            height: 40px;
+
+            cursor: pointer;
+        }
+        /* hier kommt der blog teil */
+        .imgs1{
+            width: 200px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 20px 20px;
+        }
+        .btnReMor{
+            border: 2px solid black;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(6, 128, 71);
+
+            width: 120px;
+            height: 40px;
+            cursor: pointer;
+        }
+        a {
+            color: white;
+        }
+
+        
+        .blog1{
+            width: 30%;
+            height: 40%;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            border-radius: 20px;
+            background-color: rgba(221, 233, 235, 0.133);
+
+
+
+        }
+        .blogs{
+            display: flex; 
+            gap: 50px;
+           
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    
+        <div class="cards">
+            <div class="cardBackgroundColor">
+            <div class="card">
+                <!--zu erst kommt das Foto-->
+                    <div >
+                        <img class="imgs" src="Shirt.jpg"  title="Cotton Shirt">
+                    </div>
+                <!--dann kommt die Beschreibung fuer das Foto-->
+                    <div><h3 class="card-Beschreibung">Cutton Trending Shirt's</h3></div>
+                <!--dann kommt die bewertung fuer das Foto in SternForm -->
+                    <div class="stars" aria-label="4 out of 5 stars">
+                        <span class="star filled">★</span> <!---du kannst auch entity fuer die Sterne nutzen. -->
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">☆</span>
+                    </div>
+                <!--dann einen button mit um diese Artikel dem Korb hinzufuegen. -->
+
+                <div >
+                    <button class="add">add To Cart</button>
+                </div>
+
+
+                </div>
+            </div>    
+            <!---card 2-->
+            <div class="card">
+                <!--zu erst kommt das Foto-->
+                    <div >
+                        <img class="imgs" src="Shirt.jpg" title="Cotton Shirt">
+                    </div>
+                <!--dann kommt die Beschreibung fuer das Foto-->
+                    <div><h3 class="card-Beschreibung">Cutton Trending Shirt's</h3></div>
+                <!--dann kommt die bewertung fuer das Foto in SternForm -->
+                    <div class="stars" aria-label="4 out of 5 stars">
+                        <span class="star filled">★</span> <!---du kannst auch entity fuer die Sterne nutzen. -->
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">☆</span>
+                    </div>
+                <!--dann einen button mit um diese Artikel dem Korb hinzufuegen. -->
+
+                <div >
+                    <button class="add">add To Cart</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!--jetzt kommt der Blog teil -->
+
+        <section  class="blogs" >
+           <!-- Blog fuer die Damen --> 
+            <div class="blog1">
+                <div><img class="imgs1" src="woman1.webp" title="Women Trends"></div>
+                
+                <div class="besch">
+                    <div><h3>Trending Woman Cloths</h3></div>
+                    <div><p>Die aktuellen Trends für Mädchenkleidung kombinieren Komfort und Stil mit Oversized-Blazern, weiten Jeans und lebendigen Farben wie Neonpink. Nachhaltige Materialien und verspielte Accessoires wie Chunky-Sneakers setzen dieses Jahr ein starkes Statement.</p></div>
+                    <div><button class="btnReMor"><a href="https://www.whowhatwear.com/">Read More</a></button></div>
+                </div>
+
+            </div>
+
+            <!--Blog für Maenner Abteilung -->
+
+            <div class="blog1">
+                <div><img class="imgs1" src="woman1.webp" title="Women Trends"></div>
+                
+                <div class="besch">
+                    <div><h3>Trending Woman Cloths</h3></div>
+                    <div><p>Die aktuellen Trends für Mädchenkleidung kombinieren Komfort und Stil mit Oversized-Blazern, weiten Jeans und lebendigen Farben wie Neonpink. Nachhaltige Materialien und verspielte Accessoires wie Chunky-Sneakers setzen dieses Jahr ein starkes Statement.</p></div>
+                    <div><button class="btnReMor"><a href="https://www.whowhatwear.com/">Read More</a></button></div>
+                </div>
+
+            </div>
+
+        </section>
+</body>
+</html>

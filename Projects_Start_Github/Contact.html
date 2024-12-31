@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            ;
+        }
+
+        nav ul {
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            justify-content: end;
+            flex-grow: 1;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        nav ul li {
+            font-family: Arial Sans-Serif;
+            color: black;
+            font-size: 20px;
+
+            margin: 20px;
+
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            transition: text-decoration 0.4s ease-out;
+
+        }
+
+
+        nav ul>.Marke {
+            margin-right: auto;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        /* jetzt kommt der main teil */
+        main {
+            flex: 1;
+            /* Nimmt den verfügbaren Platz ein */
+        }
+
+        .knowus {
+            width: 100%;
+            height: 150px;
+            display: grid;
+            background-color: blueviolet;
+            color: white;
+            align-items: center;
+            padding: 0 px;
+            text-align: start;
+        }
+
+        /* main teil */
+        main .office-information {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 20px 20px;
+
+        }
+
+        .office-information {
+            flex: 1;
+        }
+
+        .office-information {
+            border: 2px solid gainsboro;
+            border-radius: 10px;
+        }
+
+
+        main .office-information>* {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            padding: 10px 50px;
+
+        }
+
+        main .imgteil {
+            min-width: 10%;
+        }
+
+
+
+        /* footer teil */
+
+        /* Footer */
+        footer {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer .Signup {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            text-align: start;
+        }
+
+        .Signup .inputsection {
+            margin-left: 50%;
+        }
+
+        footer .Signup h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer .Signup p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        footer .Signup input {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        footer .Signup button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer .Signup button:hover {
+            background-color: #45a049;
+        }
+
+        .footLastInformation {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footLastInformation {
+            flex: 1;
+        }
+
+        .footLastInformation h1,
+        p {
+            text-align: start;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li class="Marke"><a href="Home.html">Trends</a></li>
+                <li id="nav1"><a href="Home.html">Home</a></li>
+                <li id="nav2"><a href="Home.html#shops">Shops</a></li>
+                <li id="nav3"><a href="Home.html">Blog</a></li>
+                <li id="nav4"><a href="aboutus.html">About</a></li>
+                <li id="nav5"><a href="Contact.html">Contact</a></li>
+                <li><i class="fa-solid fa-cart-shopping"></i></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <div class="knowus">
+            <h1>#Let's Connect</h1>
+            <p>#conect with us for all possible kind of services</p>
+
+        </div>
+
+        <div class="office-information">
+
+            <!--hier kommt die Kontaktdaten und dann einen bild von -->
+            <div class="kontakt">
+                <div>
+                    <h1>Visit our Office or Contact us</h1>
+                </div>
+                <p>Adress: Panoramastraße 1A, 10178 Berlin</p>
+                <p>content: Trends@yourshop.de</p>
+                <p>number: 12344567890</p>
+            </div>
+            <div class="imgteil">
+                <img src="staticmap.webp" title="google maps">
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="Signup">
+            <div>
+                <h1>Sign Up for Newsletter</h1>
+                <p>Sign up on our website to get your wishlist cheaper</p>
+            </div>
+            <div class="inputsection">
+                <label for="email"></label>
+                <input type="email" placeholder="Enter Email Address">
+            </div>
+            <div>
+                <button>Sign up</button>
+            </div>
+        </div>
+        <!--jetzt kommt der andere footer teil -->
+
+        <div class="footLastInformation">
+            <div>
+                <h1>Trends</h1>
+                <p>Service</p>
+                <p>customer</p>
+                <p>Satifaction</p>
+            </div>
+            <div>
+                <h1>About Us</h1>
+                <p>Berlin Halberstaedter Str.22
+                    <br>
+                    10105 Berlin
+                </p>
+                <p>Service</p>
+                <p>customer</p>
+                <p>Satisfaction</p>
+            </div>
+            <div>
+                <h1>Contact</h1>
+                <p>0123243442</p>
+                <p>Coming up...</p>
+                <p>New Arrival</p>
+
+            </div>
+            <div>
+                <h1>Trending</h1>
+                <p>Service</p>
+                <p>customer</p>
+                <p>Shops</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        let shop = document.querySelector('#nav2 a'); // Direkter Zugriff auf den Link im li-Element
+
+        shop.addEventListener('click', (event) => {
+            event.preventDefault(); // Verhindert das Standardverhalten des Links
+
+            if (window.location.pathname.includes('Home.html')) {
+                // Wenn die aktuelle Seite bereits home.html ist
+                let target = document.querySelector('#shops');
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            } else {
+                // Wenn die Seite NICHT auf home.html ist
+                window.location.href = 'Home.html#shops';
+            }
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

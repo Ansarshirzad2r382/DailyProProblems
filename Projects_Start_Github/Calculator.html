@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+   
+    <style>
+
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+ 
+ body{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+  height: 100vh;
+  
+  
+}
+
+#calculator{
+  font-family: Arial Sans-Serif ; /* Zuerst wird Arial als Schriftart verwendet.
+                                  Wenn Arial nicht verfügbar ist, wird eine generische Schriftart
+                                  aus der sans-serif-Familie (z. B. Helvetica) genommen. */
+                                  
+  background-color: hsl(0, 0%, 15%);    
+  border-radius: 10px;
+  
+  max-width: 500px; /** der calculator, kann fenster groesse kann nicht groesse als 500px werden*/
+  
+  overflow: hidden; /* wenn elemente aus dem div bereich rausgeht, dann sollten die unsichtbar werden */
+
+  
+}
+#display{
+  width: 100%;
+  font-size: 5rem;
+  
+  text-align: left;/* der text soll von links nach rechts vorkommen soll*/
+  
+  border: none;
+  color: white;
+  
+  background-color: hsl(0, 0%, 20%);
+  
+}
+#keys{
+  
+  display: grid;
+  /* Wir erstellen 4 gleich große Spalten mit der Funktion repeat(4, 1fr).
+   Die Funktion sorgt dafür, dass jede Spalte den gleichen Platzanteil (1fr) erhält
+   und sich das Layout dynamisch anpasst. */
+  grid-template-columns: repeat(4, 1fr) ;
+  gap: 10px;
+}
+/*wenn du dem div von button nicht eine groesse eingibst, dann hast du den vorteil, dass der button
+sich mit der  vergreosserung im div anpasst. */
+button{
+  
+
+  height: 100px;
+  
+  border-radius: 50px;
+  border-color: hsl(0, 0%, 30%);
+  
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+button:hover{
+  background-color: hsl(0, 0%, 40%);
+}
+/* when we click on the button */
+button:active{
+  border-color: hsl(0, 0%, 50%);
+}
+
+.operator-btn{
+ background-color: hsl(35, 100%, 55%); 
+}
+.operator-btn:hover{
+ background-color: hsl(35, 100%, 65%); 
+}
+.operator-btn:active{
+ background-color: hsl(35, 100%, 75%); 
+  
+}
+
+/* Responsive Styling für Tablets (max-width 786px) */
+@media (max-width: 786px) {
+  #calculator {
+    width: 90%;  /* Auf kleineren Bildschirmen den Kalkulator auf 90% der Breite setzen */
+    max-width: 400px;  /* Die maximale Breite des Kalkulators auf 400px setzen */
+  }
+
+  #display {
+    font-size: 4rem;  /* Kleinere Schriftgröße auf Tablets */
+  }
+
+  #keys {
+    grid-template-columns: repeat(3, 1fr);  /* Auf Tablets 3 Spalten statt 4 */
+  }
+
+  button {
+    font-size: 2.5rem;  /* Kleinere Schriftgröße für Buttons */
+  }
+}
+
+/* Responsive Styling für Smartphones (max-width 480px) */
+@media (max-width: 480px) {
+  #calculator {
+    width: 95%;  /* Den Kalkulator auf 95% der Bildschirmbreite setzen */
+    max-width: 350px;  /* Die maximale Breite des Kalkulators auf 350px setzen */
+  }
+
+  #display {
+    font-size: 3rem;  /* Noch kleinere Schriftgröße auf sehr kleinen Bildschirmen */
+  }
+
+  #keys {
+    grid-template-columns: repeat(2, 1fr);  /* Auf Smartphones 2 Spalten statt 3 */
+  }
+
+  button {
+    font-size: 2rem;  /* Weitere Reduzierung der Schriftgröße für Buttons */
+    height: 80px;  /* Reduzierte Höhe der Buttons */
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+       
+       <input id="display" readonly /> <!-- man sollte den input nur sehen koenne und nicht eingeben koennen. -->
+         
+        <div id="keys"> <!-- Wenn man auf den Button klickt (EventListener: onclick), wird der Wert des Buttons 
+                             an die Methode appendToDisplay übergeben. -->
+
+          
+          
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendToDisplay('4')" >4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/ </button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            
+            <button onclick="calculate()" >=</button>
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+        </div>
+      
+    </div>
+    <script>
+
+        
+const display = document.getElementById('display');
+
+function appendToDisplay(input) {
+  
+  display.value += input; // Füge den Wert ins Display ein
+                         // wichtig: und display.value greift auf den display methode value, den wir durch klicken dem appenToDisplay() hinzugefügt 
+                         // disen wert ist nur durch den variable : "value" zugreifbar . 
+}
+
+
+/* wenn man auf C klick, dann setzen wir den wert von display.value, dass von appendToDisplay() methode gekommen ist, zu einem
+  leeren String. */
+  
+function clearDisplay(){
+  display.value = "";
+   
+}
+
+
+function calculate(){
+  display.value = eval(display.value); // hier greifen wir auf parametern, den der  display.value in der Methode 
+  // appendToDisplay() bekommen hat. 
+  display.value = eval(display.value);  
+}
+
+    </script>
+
+  </body>
+</html>
