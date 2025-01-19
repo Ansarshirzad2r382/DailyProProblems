@@ -23,16 +23,14 @@
 }
 
 #calculator{
-  font-family: Arial Sans-Serif ; /* Zuerst wird Arial als Schriftart verwendet.
-                                  Wenn Arial nicht verfügbar ist, wird eine generische Schriftart
-                                  aus der sans-serif-Familie (z. B. Helvetica) genommen. */
+  font-family: Arial Sans-Serif ; 
                                   
   background-color: hsl(0, 0%, 15%);    
   border-radius: 10px;
   
-  max-width: 500px; /** der calculator, kann fenster groesse kann nicht groesse als 500px werden*/
+  max-width: 500px; 
   
-  overflow: hidden; /* wenn elemente aus dem div bereich rausgeht, dann sollten die unsichtbar werden */
+  overflow: hidden; 
 
   
 }
@@ -40,7 +38,7 @@
   width: 100%;
   font-size: 5rem;
   
-  text-align: left;/* der text soll von links nach rechts vorkommen soll*/
+  text-align: left;/
   
   border: none;
   color: white;
@@ -51,14 +49,11 @@
 #keys{
   
   display: grid;
-  /* Wir erstellen 4 gleich große Spalten mit der Funktion repeat(4, 1fr).
-   Die Funktion sorgt dafür, dass jede Spalte den gleichen Platzanteil (1fr) erhält
-   und sich das Layout dynamisch anpasst. */
+ 
   grid-template-columns: repeat(4, 1fr) ;
   gap: 10px;
 }
-/*wenn du dem div von button nicht eine groesse eingibst, dann hast du den vorteil, dass der button
-sich mit der  vergreosserung im div anpasst. */
+
 button{
   
 
@@ -104,32 +99,32 @@ button:active{
   }
 
   #keys {
-    grid-template-columns: repeat(3, 1fr);  /* Auf Tablets 3 Spalten statt 4 */
+    grid-template-columns: repeat(3, 1fr); 
   }
 
   button {
-    font-size: 2.5rem;  /* Kleinere Schriftgröße für Buttons */
+    font-size: 2.5rem; 
   }
 }
 
 /* Responsive Styling für Smartphones (max-width 480px) */
 @media (max-width: 480px) {
   #calculator {
-    width: 95%;  /* Den Kalkulator auf 95% der Bildschirmbreite setzen */
-    max-width: 350px;  /* Die maximale Breite des Kalkulators auf 350px setzen */
+    width: 95%;  
+    max-width: 350px;  
   }
 
   #display {
-    font-size: 3rem;  /* Noch kleinere Schriftgröße auf sehr kleinen Bildschirmen */
+    font-size: 3rem;  
   }
 
   #keys {
-    grid-template-columns: repeat(2, 1fr);  /* Auf Smartphones 2 Spalten statt 3 */
+    grid-template-columns: repeat(2, 1fr);  
   }
 
   button {
-    font-size: 2rem;  /* Weitere Reduzierung der Schriftgröße für Buttons */
-    height: 80px;  /* Reduzierte Höhe der Buttons */
+    font-size: 2rem;  
+    height: 80px;  
   }
 }
 
@@ -175,14 +170,12 @@ const display = document.getElementById('display');
 
 function appendToDisplay(input) {
   
-  display.value += input; // Füge den Wert ins Display ein
-                         // wichtig: und display.value greift auf den display methode value, den wir durch klicken dem appenToDisplay() hinzugefügt 
-                         // disen wert ist nur durch den variable : "value" zugreifbar . 
+  display.value += input; 
+
 }
 
 
-/* wenn man auf C klick, dann setzen wir den wert von display.value, dass von appendToDisplay() methode gekommen ist, zu einem
-  leeren String. */
+
   
 function clearDisplay(){
   display.value = "";
@@ -191,8 +184,8 @@ function clearDisplay(){
 
 
 function calculate(){
-  display.value = eval(display.value); // hier greifen wir auf parametern, den der  display.value in der Methode 
-  // appendToDisplay() bekommen hat. 
+  display.value = eval(display.value); 
+ 
   display.value = eval(display.value);  
 }
 
